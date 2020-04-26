@@ -33,8 +33,6 @@ Utility Module to create AWS Chatbot and its dependencies
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| alarm\_sns\_topic | The SNS topic to which CloudWatch Alarms will be sent. |
+No output.
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
