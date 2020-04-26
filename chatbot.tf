@@ -1,6 +1,6 @@
 resource "aws_cloudformation_stack" "tf_chatbot" {
   count = var.enabled ? 1 : 0
-  name  = "terraform-chatbot-${var.org_name}"
+  name  = "terraform-chatbot-${var.org_name}-${var.workspace_name}"
   parameters = {
     ConfigurationNameParam = "${var.org_name}-${var.workspace_name}"
     IamRoleArnArnParam     = aws_iam_role.chatbot-role.*.arn[0]
