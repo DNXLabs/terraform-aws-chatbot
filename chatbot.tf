@@ -14,7 +14,7 @@ resource "aws_cloudformation_stack" "tf_chatbot" {
 
 resource "aws_iam_role" "chatbot-role" {
   count              = var.enabled ? 1 : 0
-  name               = "${var.org_name}-chatbot-role"
+  name               = "${var.org_name}-${var.workspace_name}-chatbot-role"
   assume_role_policy = data.aws_iam_policy_document.assume_role_chatbot.*.json[0]
   tags               = var.tags
 }
