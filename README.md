@@ -3,7 +3,7 @@
 [![LICENSE](https://img.shields.io/github/license/DNXLabs/terraform-aws-chatbot)](https://github.com/DNXLabs/terraform-aws-chatbot/blob/master/LICENSE)
 
 
-Utility Module to create AWS Chatbot and its dependencies
+Utility Module to create AWS Chatbot and its dependencies - NEW README.
 
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
