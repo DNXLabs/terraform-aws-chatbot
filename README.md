@@ -1,4 +1,23 @@
 # terraform-aws-chatbot
+
+Terraform-aws-chatbot is a utility Module to create AWS Chatbot and its dependencies
+
+This module requires:
+ * Terraform Version >=0.12.20
+
+This modules creates the following resources:
+
+ - An Identity and Access Management (IAM)
+ - AWS Chatbot
+ - Simple Notification Service(SNS) topic to connect to AWS Chatbot
+
+In addition you have the option to:
+
+ - Create aws chatboot and integrate to slack
+ - Create a Slack channel id to send budget notification using AWS Chatbot
+ - Create a Slack workspace id to send budget notification using AWS Chatbot
+
+ 
 [![Lint Status](https://github.com/DNXLabs/terraform-aws-chatbot/workflows/Lint/badge.svg)](https://github.com/DNXLabs/terraform-aws-chatbot/actions)
 [![LICENSE](https://img.shields.io/github/license/DNXLabs/terraform-aws-chatbot)](https://github.com/DNXLabs/terraform-aws-chatbot/blob/master/LICENSE)
 
