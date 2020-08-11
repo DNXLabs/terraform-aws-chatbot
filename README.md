@@ -17,6 +17,8 @@ In addition you have the option to:
  - Create a Slack channel id to send budget notification using AWS Chatbot
  - Create a Slack workspace id to send budget notification using AWS Chatbot
 
+More information: https://dnxlabs.slab.com/public/jydr8b5f
+
 
 [![Lint Status](https://github.com/DNXLabs/terraform-aws-chatbot/workflows/Lint/badge.svg)](https://github.com/DNXLabs/terraform-aws-chatbot/actions)
 [![LICENSE](https://img.shields.io/github/license/DNXLabs/terraform-aws-chatbot)](https://github.com/DNXLabs/terraform-aws-chatbot/blob/master/LICENSE)
