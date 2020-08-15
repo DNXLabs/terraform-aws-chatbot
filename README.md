@@ -17,7 +17,8 @@ In addition you have the option to:
  - Create a Slack channel id to send budget notification using AWS Chatbot
  - Create a Slack workspace id to send budget notification using AWS Chatbot
 
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!--- BEGIN_TF_DOCS --->
+
 ## Requirements
 
 | Name | Version |
@@ -46,4 +47,12 @@ In addition you have the option to:
 
 No output.
 
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!--- END_TF_DOCS --->
+
+## Authors
+
+Module managed by [DNX Solutions](https://github.com/DNXLabs).
+
+## License
+
+Apache 2 Licensed. See [LICENSE](https://github.com/DNXLabs/terraform-aws-chatbot/blob/master/LICENSE) for full details.
