@@ -3,9 +3,9 @@
 [![Lint Status](https://github.com/DNXLabs/terraform-aws-chatbot/workflows/Lint/badge.svg)](https://github.com/DNXLabs/terraform-aws-chatbot/actions)
 [![LICENSE](https://img.shields.io/github/license/DNXLabs/terraform-aws-chatbot)](https://github.com/DNXLabs/terraform-aws-chatbot/blob/master/LICENSE)
 
-This terraform module creates AWS Chatbot and its dependencies
+This terraform module creates AWS Chatbot and its dependencies.
 
-This modules creates the following resources:
+The following resources will be created:
 
  - An Identity and Access Management (IAM)
  - AWS Chatbot
