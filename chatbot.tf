@@ -4,7 +4,7 @@ resource "aws_cloudformation_stack" "tf_chatbot" {
   parameters = {
     ConfigurationNameParam = "${var.org_name}-${var.workspace_name}"
     IamRoleArnArnParam     = aws_iam_role.chatbot-role.*.arn[0]
-    SnsTopicArnParam       = var.alarm_sns_topic_arn
+    SnsTopicArnsParam       = join(",",flatten([var.alarm_sns_topic_arns]))
     SlackChannelIdParam    = var.slack_channel_id
     SlackWorkspaceIdParam  = var.slack_workspace_id
   }

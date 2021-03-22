@@ -16,8 +16,10 @@ variable "slack_workspace_id" {
   description = "Slack workspace id to send budget notfication using AWS Chatbot"
   default     = ""
 }
-variable "alarm_sns_topic_arn" {
-  description = "SNS Topic ARN to connect to AWS Chatbot"
+variable "alarm_sns_topic_arns" {
+  description = "ARN of SNS Topic(s) to connect to AWS Chatbot"
+  # list of string (accept string for backwards compatibility)
+  type = any
 }
 
 
