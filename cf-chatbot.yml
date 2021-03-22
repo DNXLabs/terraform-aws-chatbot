@@ -37,3 +37,8 @@ Resources:
         !Ref SnsTopicArnsParam
       LoggingLevel:
         !Ref LoggingLevelParam
+
+Outputs:
+  ConfigurationArn:
+    Description: The ARN of the Chatbot Slack configuration
+    Value: !Ref Chatbot
