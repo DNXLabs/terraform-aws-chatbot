@@ -35,8 +35,9 @@ In addition you have the option to:
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| alarm\_sns\_topic\_arn | SNS Topic ARN to connect to AWS Chatbot | `any` | n/a | yes |
+| alarm\_sns\_topic\_arns | SNS Topic ARN(s) to connect to AWS Chatbot | `list(string) or string` | n/a | yes |
 | enabled | If true, will create aws chatboot and integrate to slack | `string` | `"false"` | no |
+| logging_level | Specifies the logging level for this configuration. This property affects the log entries pushed to Amazon CloudWatch Logs. Logging levels include ERROR, INFO, or NONE. | `string` | ERROR | no |
 | org\_name | Name for this organization | `any` | n/a | yes |
 | slack\_channel\_id | Slack channel id to send budget notfication using AWS Chatbot | `string` | `""` | no |
 | slack\_workspace\_id | Slack workspace id to send budget notfication using AWS Chatbot | `string` | `""` | no |
