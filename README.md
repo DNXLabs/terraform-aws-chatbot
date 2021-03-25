@@ -8,14 +8,11 @@ This terraform module creates AWS Chatbot and its dependencies.
 The following resources will be created:
 
  - An Identity and Access Management (IAM)
- - AWS Chatbot
- - Simple Notification Service(SNS) topic to connect to AWS Chatbot
 
 In addition you have the option to:
 
- - Create aws chatboot and integrate to slack
- - Create a Slack channel id to send budget notification using AWS Chatbot
- - Create a Slack workspace id to send budget notification using AWS Chatbot
+ - Create aws chatboot workspace(s) and integrate to slack
+ - Create AWS chatbot clients connecting to one or more slack channel(s) to send notification using AWS Chatbot
 
 <!--- BEGIN_TF_DOCS --->
 
@@ -36,17 +33,22 @@ In addition you have the option to:
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | alarm\_sns\_topic\_arns | SNS Topic ARN(s) to connect to AWS Chatbot | `list(string) or string` | n/a | yes |
-| enabled | If true, will create aws chatboot and integrate to slack | `string` | `"false"` | no |
+| enabled | If true, will create aws chatbots | `string` | `"false"` | no |
 | logging_level | Specifies the logging level for this configuration. This property affects the log entries pushed to Amazon CloudWatch Logs. Logging levels include ERROR, INFO, or NONE. | `string` | ERROR | no |
 | org\_name | Name for this organization | `any` | n/a | yes |
 | slack\_channel\_id | Slack channel id to send budget notfication using AWS Chatbot | `string` | `""` | no |
 | slack\_workspace\_id | Slack workspace id to send budget notfication using AWS Chatbot | `string` | `""` | no |
+| slack\_ids | Use to define additional slack channels. Format: [ { channel = xxx, workspace=xxx } ] | `map` | `{}` | no |
 | tags | Specifies object tags key and value. This applies to all resources created by this module. | `map` | <pre>{<br>  "Terraform": true<br>}</pre> | no |
 | workspace\_name | Description for the chat integration | `any` | n/a | yes |
 
 ## Outputs
 
-No output.
+| Name | Description |
+|------|-------------|
+| role_arn | The ARN of the Chatbot role |
+| role_name | The name of the Chatbot role |
+| slack_arns | A map of the Chatbot Slack configurations ARNs |
 
 <!--- END_TF_DOCS --->
 
