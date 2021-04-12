@@ -16,6 +16,13 @@ variable "slack_workspace_id" {
   description = "Slack workspace id to send budget notfication using AWS Chatbot"
   default     = ""
 }
+
+variable slack_ids {
+  description = "Use to define additional slack channels. Format: [ { channel = xxx, workspace=xxx }"
+  default     = {}
+  type        = any
+}
+
 variable "alarm_sns_topic_arns" {
   description = "ARN of SNS Topic(s) to connect to AWS Chatbot"
   # list of string (accept string for backwards compatibility)
@@ -25,6 +32,7 @@ variable "alarm_sns_topic_arns" {
 
 variable "tags" {
   description = "Specifies object tags key and value. This applies to all resources created by this module."
+  type        = map(string)
   default = {
     "Terraform" = true
   }
