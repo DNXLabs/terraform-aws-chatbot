@@ -29,3 +29,8 @@ variable "tags" {
     "Terraform" = true
   }
 }
+
+variable "logging_level" {
+  description = "Specifies the logging level for this configuration. This property affects the log entries pushed to Amazon CloudWatch Logs. Logging levels include ERROR, INFO, or NONE."
+  default     = "ERROR"
+}
