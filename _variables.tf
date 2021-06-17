@@ -17,7 +17,7 @@ variable "slack_workspace_id" {
   default     = ""
 }
 
-variable slack_ids {
+variable "slack_ids" {
   description = "Use to define additional slack channels. Format: [ { channel = xxx, workspace=xxx }"
   default     = {}
   type        = any
