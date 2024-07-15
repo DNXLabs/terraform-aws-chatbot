@@ -1,15 +1,10 @@
 
-output "slack_arns" {
-  description = "A map of the Chatbot Slack configurations ARNs"
-  value       = local.slack_arns
-}
-
-output "role_name" {
+output chatbot_role_name {
   description = "The name of the Chatbot role"
-  value       = var.enabled ? aws_iam_role.chatbot[0].name : ""
+  value       = try(awscc_iam_role.chatbot.role_name, "")
 }
 
-output "role_arn" {
+output chatbot_role_arn {
   description = "The ARN of the Chatbot role"
-  value       = var.enabled ? aws_iam_role.chatbot[0].arn : ""
+  value       = try(awscc_iam_role.chatbot.arn, "")
 }
