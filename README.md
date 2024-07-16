@@ -27,28 +27,26 @@ In addition you have the option to:
 | Name | Version |
 |------|---------|
 | aws | n/a |
+| awscc | n/a |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| alarm\_sns\_topic\_arns | ARN of SNS Topic(s) to connect to AWS Chatbot | `any` | n/a | yes |
-| enabled | If true, will create aws chatboot and integrate to slack | `string` | `"false"` | no |
+| account\_ids | list of accounts that can send notifications | `list` | `[]` | no |
 | logging\_level | Specifies the logging level for this configuration. This property affects the log entries pushed to Amazon CloudWatch Logs. Logging levels include ERROR, INFO, or NONE. | `string` | `"ERROR"` | no |
 | org\_name | Name for this organization | `any` | n/a | yes |
-| slack\_channel\_id | Slack channel id to send budget notfication using AWS Chatbot | `string` | `""` | no |
-| slack\_ids | Use to define additional slack channels. Format: [ { channel = xxx, workspace=xxx } | `any` | `{}` | no |
-| slack\_workspace\_id | Slack workspace id to send budget notfication using AWS Chatbot | `string` | `""` | no |
+| slack\_targets | Use to define additional slack channels. Format: [ { slack\_channel\_name=xxxx , slack\_channel\_id=xxx, slack\_workspace\_id=xxx }] | `any` | `[]` | no |
 | tags | Specifies object tags key and value. This applies to all resources created by this module. | `map(string)` | <pre>{<br>  "Terraform": true<br>}</pre> | no |
+| teams\_targets | Use to define additional slack channels. Format: [ { team\_id=xxxx , teams\_channel\_id=xxx, teams\_tenant\_id=xxx }] | `any` | `[]` | no |
 | workspace\_name | Description for the chat integration | `any` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| role\_arn | The ARN of the Chatbot role |
-| role\_name | The name of the Chatbot role |
-| slack\_arns | A map of the Chatbot Slack configurations ARNs |
+| chatbot\_role\_arn | The ARN of the Chatbot role |
+| chatbot\_role\_name | The name of the Chatbot role |
 
 <!--- END_TF_DOCS --->
 
